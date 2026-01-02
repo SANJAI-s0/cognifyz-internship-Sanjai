@@ -1,0 +1,262 @@
+/* ===============================
+   RESET & ROOT VARIABLES
+   =============================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #f7fafc;
+  --card: #ffffff;
+  --accent: #0ea5a0;
+  --muted: #64748b;
+  --radius: 10px;
+  --gap: 16px;
+}
+
+/* ===============================
+   BASE STYLES
+   =============================== */
+body {
+  background: var(--bg);
+  color: #0f172a;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  line-height: 1.4;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ===============================
+   HEADER
+   =============================== */
+.site-header {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.subtitle {
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+/* ===============================
+   CARD SECTIONS
+   =============================== */
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: 0 6px 18px rgba(12, 26, 60, 0.06);
+  padding: 18px;
+  margin-bottom: var(--gap);
+}
+
+/* ===============================
+   THUMBNAIL GRID
+   =============================== */
+.thumb-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 10px;
+  align-items: stretch;
+  margin-top: 12px;
+}
+
+.thumb {
+  display: block;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid #e6eef6;
+  transition: transform 0.18s ease;
+}
+
+.thumb img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  display: block;
+}
+
+/* subtle scale on hover */
+.thumb:hover {
+  transform: scale(1.02);
+}
+
+/* ===============================
+   LIGHTBOX OVERLAY (CSS :target)
+   =============================== */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(2, 6, 23, 0.7);
+  z-index: 9999;
+  padding: 40px;
+  text-align: center;
+}
+
+.lightbox img {
+  max-width: 95%;
+  max-height: 80vh;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.6);
+}
+
+/* Caption text */
+.lightbox .caption {
+  margin-top: 12px;
+  color: #e6eef6;
+}
+
+/* Close button */
+.lightbox .close {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  font-size: 36px;
+  color: #ffffff;
+  text-decoration: none;
+  line-height: 1;
+  padding: 6px 10px;
+}
+
+/* Show lightbox when matched with :target */
+.lightbox:target {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===============================
+   SLIDESHOW (CSS ANIMATION)
+   =============================== */
+
+/* Slideshow container */
+.slideshow {
+  position: relative;
+  height: 0;
+  padding-bottom: 45%;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #111827;
+}
+
+/* Individual slides (stacked) */
+.slide {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  transform: scale(1);
+  transition: opacity 0.8s ease;
+}
+
+/* Slide images */
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Slide captions */
+.slide figcaption {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  background: rgba(0, 0, 0, 0.45);
+  color: #ffffff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+/* ===============================
+   SLIDESHOW ANIMATION
+   =============================== */
+@keyframes fadeSlide {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  6% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+  30% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+  36% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+/* Assign animation with staggered delays */
+.slide:nth-child(1) {
+  animation: fadeSlide 12s infinite;
+  animation-delay: 0s;
+}
+
+.slide:nth-child(2) {
+  animation: fadeSlide 12s infinite;
+  animation-delay: 4s;
+}
+
+.slide:nth-child(3) {
+  animation: fadeSlide 12s infinite;
+  animation-delay: 8s;
+}
+
+/* Accessibility: focus outline for active slide */
+.slide:focus,
+.slide[aria-current="true"] {
+  outline: 3px solid rgba(14, 165, 160, 0.18);
+}
+
+/* ===============================
+   MISC / TEXT
+   =============================== */
+.muted {
+  color: var(--muted);
+  margin-top: 8px;
+}
+
+/* ===============================
+   RESPONSIVE TWEAKS
+   =============================== */
+@media (max-width: 680px) {
+  .thumb img {
+    height: 100px;
+  }
+
+  .lightbox img {
+    max-height: 70vh;
+  }
+
+  .slide figcaption {
+    left: 8px;
+    bottom: 8px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .card {
+    padding: 12px;
+  }
+}

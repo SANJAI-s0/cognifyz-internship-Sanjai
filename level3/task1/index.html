@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- ================= META ================= -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Level 3 Task 1 - Image manipulation using CSS only, including a thumbnail gallery and automatic slideshow.">
+  <meta name="author" content="Sanjai">
+  <meta name="keywords" content="CSS Gallery, CSS Slideshow, Image Manipulation, Cognifyz Internship">
+  <meta name="robots" content="index, follow">
+
+  <!-- ================= TITLE ================= -->
+  <title>Level 3 Task 1 | Image Manipulation (CSS Only)</title>
+
+  <!-- ================= CSS ================= -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- ================= HEADER ================= -->
+  <header class="site-header">
+    <div class="container">
+      <h1>Level 3 — Image Manipulation</h1>
+      <p class="subtitle">
+        CSS-only thumbnail gallery (click to enlarge) and automatic image slideshow
+      </p>
+    </div>
+  </header>
+
+  <!-- ================= MAIN ================= -->
+  <main class="container">
+
+    <!-- ======= THUMBNAIL GALLERY ======= -->
+    <section class="card">
+      <h2>Thumbnail Gallery (Click a thumbnail)</h2>
+
+      <!-- Anchor target for closing lightbox -->
+      <div id="gallery"></div>
+
+      <div class="thumb-grid">
+        <a href="#img1" class="thumb">
+          <img src="../../assets/images/project-card.svg" alt="Gallery image 1">
+        </a>
+
+        <a href="#img2" class="thumb">
+          <img src="../../assets/images/project-card.svg" alt="Gallery image 2">
+        </a>
+
+        <a href="#img3" class="thumb">
+          <img src="../../assets/images/project-card.svg" alt="Gallery image 3">
+        </a>
+
+        <a href="#img4" class="thumb">
+          <img src="../../assets/images/project-card.svg" alt="Gallery image 4">
+        </a>
+      </div>
+
+      <!-- Lightbox overlays (CSS :target based) -->
+      <div class="lightbox" id="img1">
+        <a class="close" href="#gallery" aria-label="Close image">&times;</a>
+        <img src="../../assets/images/project-card.svg" alt="Gallery image 1 enlarged">
+        <p class="caption">Gallery Image 1</p>
+      </div>
+
+      <div class="lightbox" id="img2">
+        <a class="close" href="#gallery" aria-label="Close image">&times;</a>
+        <img src="../../assets/images/project-card.svg" alt="Gallery image 2 enlarged">
+        <p class="caption">Gallery Image 2</p>
+      </div>
+
+      <div class="lightbox" id="img3">
+        <a class="close" href="#gallery" aria-label="Close image">&times;</a>
+        <img src="../../assets/images/project-card.svg" alt="Gallery image 3 enlarged">
+        <p class="caption">Gallery Image 3</p>
+      </div>
+
+      <div class="lightbox" id="img4">
+        <a class="close" href="#gallery" aria-label="Close image">&times;</a>
+        <img src="../../assets/images/project-card.svg" alt="Gallery image 4 enlarged">
+        <p class="caption">Gallery Image 4</p>
+      </div>
+    </section>
+
+    <!-- ======= AUTO SLIDESHOW ======= -->
+    <section class="card">
+      <h2>Auto Slideshow (CSS Only)</h2>
+
+      <div class="slideshow" aria-label="Automatic image slideshow">
+        <figure class="slide">
+          <img src="../../assets/images/internship-hero.svg" alt="Slideshow image 1">
+          <figcaption>Slide 1 — Internship Preview</figcaption>
+        </figure>
+
+        <figure class="slide">
+          <img src="../../assets/images/internship-hero.svg" alt="Slideshow image 2">
+          <figcaption>Slide 2 — Visual Demonstration</figcaption>
+        </figure>
+
+        <figure class="slide">
+          <img src="../../assets/images/internship-hero.svg" alt="Slideshow image 3">
+          <figcaption>Slide 3 — CSS Animation</figcaption>
+        </figure>
+      </div>
+
+      <p class="muted">
+        Slides transition automatically every 4 seconds using pure CSS animations.
+      </p>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      © 2026 Cognifyz Internship — Level 3 Task 1
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<svg width="1200" height="500" viewBox="0 0 1200 500"
+     xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Web Developer Internship Banner">
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0ea5a0"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="500" rx="32" fill="url(#grad)"/>
+
+  <!-- Decorative circles -->
+  <circle cx="200" cy="120" r="80" fill="rgba(255,255,255,0.15)"/>
+  <circle cx="1000" cy="380" r="120" fill="rgba(255,255,255,0.1)"/>
+
+  <!-- Text -->
+  <text x="80" y="190"
+        font-size="48"
+        font-family="Arial, Helvetica, sans-serif"
+        font-weight="700"
+        fill="#ffffff">
+    Web Developer Internship
+  </text>
+
+  <text x="80" y="250"
+        font-size="28"
+        font-family="Arial, Helvetica, sans-serif"
+        fill="#e6fffb">
+    Build real-world skills with Cognifyz Technologies
+  </text>
+
+  <text x="80" y="310"
+        font-size="22"
+        font-family="Arial, Helvetica, sans-serif"
+        fill="#f0fdfa">
+    HTML • CSS • JavaScript • Responsive Design
+  </text>
+
+  <!-- Code icon -->
+  <rect x="800" y="140" width="260" height="160" rx="16" fill="#ffffff" opacity="0.95"/>
+  <text x="830" y="210"
+        font-size="26"
+        font-family="monospace"
+        fill="#0ea5a0">
+    &lt;/&gt; Code
+  </text>
+  <text x="830" y="245"
+        font-size="18"
+        font-family="monospace"
+        fill="#334155">
+    Learn • Build • Grow
+  </text>
+</svg>

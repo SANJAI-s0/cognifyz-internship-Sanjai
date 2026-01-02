@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- ================= META ================= -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Level 1 Task 2 - JavaScript basics including button interaction, greeting alert, and calculator for Cognifyz Internship." />
+  <meta name="author" content="Sanjai" />
+  <meta name="keywords" content="JavaScript, Cognifyz Internship, DOM, Calculator, Button Interaction" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- ================= TITLE ================= -->
+  <title>Level 1 Task 2 | Cognifyz Web Development Internship</title>
+
+  <!-- ================= CSS ================= -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <!-- ================= HEADER ================= -->
+    <header>
+      <h1>Cognifyz — Level 1: Task 2 (JavaScript)</h1>
+      <p class="subtitle">
+        This task demonstrates simple JavaScript interactions including a color-changing
+        button, time-based greeting alert, and a basic addition calculator.
+      </p>
+
+      <!-- Optional visual enhancement (SVG, non-functional) -->
+      <img
+        src="../../assets/images/skills.svg"
+        alt="Skills used: HTML, CSS, and JavaScript"
+        style="max-width:600px; margin:20px auto; display:block;"
+        loading="lazy"
+      />
+    </header>
+
+    <!-- ================= TASK 1 ================= -->
+    <!-- 1. Color-changing button -->
+    <section class="card" id="color-section" aria-labelledby="color-title">
+      <h2 id="color-title">1. Color-changing Button</h2>
+      <p>Click the button below to cycle through different background colors using JavaScript.</p>
+      <button id="color-button" class="btn">Click me</button>
+    </section>
+
+    <!-- ================= TASK 2 ================= -->
+    <!-- 2. Greeting based on time -->
+    <section class="card" id="greet-section" aria-labelledby="greet-title">
+      <h2 id="greet-title">2. Greeting Alert (Based on Current Time)</h2>
+      <p>
+        Clicking the button will display a greeting message depending on the current time of day.
+      </p>
+      <button id="greet-button" class="btn outline">Show Greeting</button>
+    </section>
+
+    <!-- ================= TASK 3 ================= -->
+    <!-- 3. Basic calculator -->
+    <section class="card" id="calc-section" aria-labelledby="calc-title">
+      <h2 id="calc-title">3. Basic Calculator (Addition)</h2>
+
+      <form id="calc-form" class="calc-form" novalidate aria-label="Addition calculator">
+        <label for="num1" class="visually-hidden">First number</label>
+        <input
+          id="num1"
+          name="num1"
+          type="number"
+          step="any"
+          placeholder="First number"
+          required
+        >
+
+        <label for="num2" class="visually-hidden">Second number</label>
+        <input
+          id="num2"
+          name="num2"
+          type="number"
+          step="any"
+          placeholder="Second number"
+          required
+        >
+
+        <button type="submit" class="btn">Add</button>
+      </form>
+
+      <div
+        id="calc-result"
+        class="result"
+        aria-live="polite"
+      >
+        Result will appear here.
+      </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+      <small>© 2026 Cognifyz Internship — Level 1 (JavaScript)</small>
+    </footer>
+  </div>
+
+  <!-- ================= SCRIPT ================= -->
+  <script src="script.js"></script>
+</body>
+</html>

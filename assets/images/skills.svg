@@ -1,0 +1,22 @@
+<svg width="800" height="120" viewBox="0 0 800 120"
+     xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tech Stack">
+  <rect width="800" height="120" rx="20" fill="#f1f5f9"/>
+
+  <!-- HTML -->
+  <rect x="40" y="30" width="140" height="60" rx="10" fill="#e34c26"/>
+  <text x="80" y="68" font-size="22" fill="#fff" font-family="Arial" font-weight="700">HTML</text>
+
+  <!-- CSS -->
+  <rect x="220" y="30" width="140" height="60" rx="10" fill="#264de4"/>
+  <text x="265" y="68" font-size="22" fill="#fff" font-family="Arial" font-weight="700">CSS</text>
+
+  <!-- JS -->
+  <rect x="400" y="30" width="140" height="60" rx="10" fill="#f7df1e"/>
+  <text x="435" y="68" font-size="22" fill="#000" font-family="Arial" font-weight="700">JS</text>
+
+  <!-- Responsive -->
+  <rect x="580" y="30" width="180" height="60" rx="10" fill="#0ea5a0"/>
+  <text x="605" y="68" font-size="20" fill="#fff" font-family="Arial" font-weight="700">
+    Responsive Design
+  </text>
+</svg>
